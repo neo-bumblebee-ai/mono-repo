@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+jupyterlab
+pyarrow
+sentence-transformers
+faiss-cpu
+tiktoken
+fastapi
+uvicorn[standard]
+streamlit
+pytest

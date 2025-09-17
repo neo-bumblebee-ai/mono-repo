@@ -1,0 +1,25 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.venv/
+.env
+.env.*
+*.sqlite
+*.db
+
+# OS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Build
+dist/
+build/
+.eggs/
+*.egg-info/
