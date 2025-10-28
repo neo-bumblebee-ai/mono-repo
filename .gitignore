@@ -1,4 +1,3 @@
-
 # Python
 __pycache__/
 *.py[cod]
@@ -17,9 +16,13 @@ __pycache__/
 # Logs
 logs/
 *.log
+logfile
 
 # Build
 dist/
 build/
 .eggs/
 *.egg-info/
+
+# PostgreSQL data directory
+pgdata/
