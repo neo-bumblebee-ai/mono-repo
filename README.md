@@ -46,5 +46,33 @@ git push ../<project-name>.git export/<project-name>:main
 - Keep `docs/` screenshots and GIFs you embed in LinkedIn/blog posts.
 - Use `README_TEMPLATE.md` to ensure every week and project has a clear story.
 
+## Local AI Environment (ai30)
+
+This repo integrates with a local PostgreSQL (pgvector) database for AI experiments.
+
+### Setup
+1. Activate your conda environment:
+conda activate ai30
+
+2. Start PostgreSQL (if not already running):
+pg_ctl -D pgdata -l logfile start
+
+3. Connect via psql:
+psql -h localhost -p 5432 -U jigne -d ai30_db
+
+4. Example Python connection:
+python projects/db_connect_test.py
+
+Notes:
+pgvector is enabled for vector storage and similarity search.
+The default table used for embeddings:
+
+CREATE TABLE embeddings (
+    id SERIAL PRIMARY KEY,
+    text TEXT,
+    embedding VECTOR(1536)
+);
+
+Supports integration with psycopg2, NumPy, and OpenAI embeddings for AI use cases.
 ## License
 MIT (adjust if needed).
